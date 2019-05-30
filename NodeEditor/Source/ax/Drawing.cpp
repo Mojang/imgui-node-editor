@@ -1,7 +1,8 @@
 //# include "stdafx.h"
-# include "ax/Drawing.h"
-# include "ax/Math2D.h"
-# include "Interop.h"
+#include "pch.h"
+# include "NodeEditor/Include/ax/Drawing.h"
+# include "NodeEditor/Include/ax/Math2D.h"
+# include "NodeEditor/Source/Interop.h"
 # include <cmath>
 
 void ax::Drawing::DrawIcon(ImDrawList* drawList, const ImVec2& a, const ImVec2& b, IconType type, bool filled, ImU32 color, ImU32 innerColor)

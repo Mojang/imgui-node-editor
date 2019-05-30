@@ -8,8 +8,8 @@
 //   Written by Michal Cichon
 //------------------------------------------------------------------------------
 # pragma once
-# include "imgui.h"
-# include "ax/Math2D.h"
+# include "imgui/imgui.h"
+# include "NodeEditor/Include/ax/Math2D.h"
 
 
 //------------------------------------------------------------------------------

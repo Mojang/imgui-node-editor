@@ -7,7 +7,8 @@
 // CREDITS
 //   Written by Michal Cichon
 //------------------------------------------------------------------------------
-# include "NodeEditor.h"
+# include "pch.h"
+# include "NodeEditor/Include/NodeEditor.h"
 # include "Editor.h"
 
 

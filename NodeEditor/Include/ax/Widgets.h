@@ -1,6 +1,6 @@
 #pragma once
-#include "imgui.h"
-#include "Drawing.h"
+#include "imgui/imgui.h"
+#include "NodeEditor/Include/ax/Drawing.h"
 
 namespace ax {
 namespace Widgets {

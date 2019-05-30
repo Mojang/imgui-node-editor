@@ -12,10 +12,11 @@
 
 //------------------------------------------------------------------------------
 # include "Interop.h"
-# include "ax/Math2D.h"
-# include "NodeEditor.h"
-# define PICOJSON_USE_LOCALE 0
-# include "picojson.h"
+# include "NodeEditor/Include/ax/Math2D.h"
+# include "NodeEditor/Include/NodeEditor.h"
+# include "json/json.h"
+//# define PICOJSON_USE_LOCALE 0
+//# include "picojson.h"
 # include <vector>
 
 
@@ -27,7 +28,6 @@ namespace Detail {
 
 //------------------------------------------------------------------------------
 namespace ed = ax::NodeEditor::Detail;
-namespace json = picojson;
 
 
 //------------------------------------------------------------------------------
@@ -353,11 +353,11 @@ struct NodeSettings
     void ClearDirty();
     void MakeDirty(SaveReasonFlags reason);
 
-    json::object Serialize();
+    Json::Value Serialize();
 
     static bool Parse(const std::string& string, NodeSettings& settings) { return Parse(string.data(), string.data() + string.size(), settings); }
     static bool Parse(const char* data, const char* dataEnd, NodeSettings& settings);
-    static bool Parse(const json::value& data, NodeSettings& result);
+    static bool Parse(const Json::Value& data, NodeSettings& result);
 };
 
 struct Settings

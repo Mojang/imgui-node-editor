@@ -1,0 +1,2 @@
+## Finding History of Code Moved to this Repository.
+This module was originally part of the Minecraftpe repo. While part of that repository the jsoncpp code was updated over the span of a few years. This repository took the code based on commit `29e7a899ab7b09ef7e2942cdc05bc7a5969b243d` in the Minecraftpe repo. To find the history of this code before it was cut, you can use github's blame feature on these files at that commit.

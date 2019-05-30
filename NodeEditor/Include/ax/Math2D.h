@@ -1057,13 +1057,13 @@ inline void cubic_bezier_fixed_step(bezier_fixed_step_callback_t callback, void*
             if (cacheIt == cache.end())
             {
                 const auto front    = cubic_bezier_split(p0, p1, p2, p3, t).left;
-                const auto length   = cubic_bezier_length(front.p0, front.p1, front.p2, front.p3);
+                const auto localLength = cubic_bezier_length(front.p0, front.p1, front.p2, front.p3);
 
-                cacheIt = cache.emplace(t, length).first;
+                cacheIt = cache.emplace(t, localLength).first;
             }
 
-            const auto length   = cacheIt->second;
-            const auto error    = targetLength - length;
+            const auto cacheLength   = cacheIt->second;
+            const auto error    = targetLength - cacheLength;
 
             if (error < error_best)
             {
@@ -1074,7 +1074,7 @@ inline void cubic_bezier_fixed_step(bezier_fixed_step_callback_t callback, void*
             if (fabsf(error) <= max_value_error || fabsf(t_start - t_end) <= max_t_error)
             {
                 result.t      = t;
-                result.length = length;
+                result.length = cacheLength;
                 result.point  = cubic_bezier(p0, p1, p2, p3, t);
 
                 callback(result, user_pointer);

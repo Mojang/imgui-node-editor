@@ -7,8 +7,10 @@
 // CREDITS
 //   Written by Michal Cichon
 //------------------------------------------------------------------------------
-# include "ax/Builders.h"
-# include "Interop.h"
+#include "pch.h"
+# include "NodeEditor/Include/ax/Builders.h"
+# include "NodeEditor/Source/Interop.h"
+
 
 
 //------------------------------------------------------------------------------

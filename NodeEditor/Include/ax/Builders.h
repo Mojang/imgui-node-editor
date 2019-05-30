@@ -11,7 +11,7 @@
 
 
 //------------------------------------------------------------------------------
-# include <NodeEditor.h>
+# include <NodeEditor/Include/NodeEditor.h>
 # include "Math2D.h"
 
 
